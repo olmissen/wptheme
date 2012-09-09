@@ -5,7 +5,7 @@ Github Theme URI: https://github.com/olmissen/wptheme
 Description: The default theme for cats and foxes and penguins.
 Author: olmissen
 Author URI: http://na.org/
-Version: v1.1.0
+Version: v1.1.1
 Tags: fox
 */
 .title {
@@ -31,7 +31,7 @@ Tags: fox
  /*   float: left;*/ fjernet for centrering
  text-align: center;  /*  giver centering*/ 
     margin: 0 auto 6px;
-    width: 23%;
+    width: 100%;
     font-family: monospace;
 font-style: normal;
 font-weight: 400;
