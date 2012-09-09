@@ -26,23 +26,11 @@ if ( !function_exists('customisetheme_setup') ):
         $customHeaders = array (
                 //Image 1
                 'perfectbeach' => array (
-                'url' => '%s/header/default.jpg',
-                'thumbnail_url' => '%s/header/thumbnails/pb-thumbnail.jpg',
-                'description' => __( 'Perfect Beach', 'customisetheme' )
+                'url' => '%s/header/default.png',
+                'thumbnail_url' => '%s/header/thumbnails/default_thumb.png',
+                'description' => __( 'Lille ræv', 'customisetheme' )
             ),
-                //Image 2
-                'tiger' => array (
-                'url' => '%s/header/tiger.jpg',
-                'thumbnail_url' => '%s/header/thumbnails/tiger-thumbnail.jpg',
-                'description' => __( 'Tiger', 'customisetheme' )
-            ),
-                //Image 3
-                'lunar' => array (
-                'url' => '%s/header/lunar.jpg',
-                'thumbnail_url' => '%s/header/thumbnails/lunar-thumbnail.jpg',
-                'description' => __( 'Lunar', 'customisetheme' )
-            )
-        );
+         );
         //Register the images with WordPress
         register_default_headers($customHeaders);
     }
