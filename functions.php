@@ -181,4 +181,31 @@ add_action( 'customize_register', 'themename_customize_register' );
 add_action( 'customize_register', 'listablehg_customize_register' );
 //Execute our custom theme functionality
 add_action( 'after_setup_theme', 'customisetheme_setup' );
+
+
+function gallery_first_image(){     
+
+    global $post;
+
+    $args = array(
+        'post_type'   => 'attachment',
+        'numberposts' => 1,
+        'post_parent' => $post->ID,
+        'order' => 'ASC',
+        'orderby' => 'menu_order',
+        'post_mime_type' => 'image'
+        );
+
+    $attachments = get_posts( $args );
+
+    if ( $attachments )
+    {
+        foreach ( $attachments as $attachment )
+        {                   
+            return wp_get_attachment_url( $attachment->ID ); 
+        }
+    }       
+    return false;   
+}
+
 ?>

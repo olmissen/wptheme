@@ -2,7 +2,6 @@
 <?php $site_url = get_home_url(); ?>
 <html>
 <head>
-
 <title><?php echo $blog_title ?></title>
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 <!--STYLING PGA CUSTOM COLORS -->
