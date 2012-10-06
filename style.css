@@ -18,19 +18,9 @@ Tags: fox
 -------------------------------------------------------------- */
 
 #access {
-    /*background: #222; 
-    background: -moz-linear-gradient(#252525, #0a0a0a);
-    background: -o-linear-gradient(#252525, #0a0a0a);
-    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#252525), to(#0a0a0a)); /* older webkit syntax */
-    /*background: -webkit-linear-gradient(#252525, #0a0a0a);
-    -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
-    -moz-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;*/
     background: none;
     clear: both;
     display: block;
-    /*   float: left;*/ fjernet for centrering
-    text-align: center;  /*  giver centering*/ 
     margin: 0 auto 6px;
     width: 100%;
     font-family: monospace;
@@ -41,8 +31,7 @@ Tags: fox
     text-decoration: none;
     letter-spacing: 2px;
     word-spacing: 0em;
-    -moz-border-radius: 15px;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 #access ul {
     font-size: 14px;
@@ -58,12 +47,10 @@ Tags: fox
     float: left;
     position: relative;
     border-right: none; 
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 10px;
     background-color: black;
     margin-right: 10px;
-    opacity: 0.75;
-    top:4px;
-    padding-bottom: 3px;
+    opacity: 0.5;
 }
 
 #access li:last-child{
@@ -108,40 +95,42 @@ Tags: fox
 #access ul ul :hover > a,
 #access a:focus {
     background: #efefef;
-    top:0px;
-    position: none;
+    opacity: 1;
+
 }
 #access li:hover > a,
 #access a:focus {
-    background: #333333; /* Show a solid color for older browsers */
-    /*background: -moz-linear-gradient(#f9f9f9, #e5e5e5);
-    background: -o-linear-gradient(#f9f9f9, #e5e5e5);
-    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f9f9f9), to(#e5e5e5)); /* Older webkit syntax */
-    /*background: -webkit-linear-gradient(#f9f9f9, #e5e5e5);*/
-    font-color: #aaaaaa;
-    font-style: bold;
-    border-radius: 10px 10px 4px 4px;
-
+    background: #333333;
+    border-radius: 10px;
+    z-index: 10;
+    opacity: 1;
 }
-
+#access a:hover{
+        color: #ffddaa !important;
+}
 
 #access ul li:hover > ul {
     display: block;
 }
 #access .current-menu-item > a,
 #access .current-menu-ancestor > a,
-#access .current_page_item > a,
-#access .current_page_ancestor > a {
-    font-weight: bold;
+#access .current-page-item > a,
+#access .current-page-ancestor > a,
+#access .current-post-ancestor > a,
+#access .current-post-item > a {
+font-weight: bold;
 }
+
 #access .current-menu-item,
 #access .current-menu-ancestor,
-#access .current_page_item,
-#access .current_page_ancestor {
-/*top:5px ;*/
-z-index: 1;
+#access .current-page-item,
+#access .current-page-ancestor,
+#access .current-post-ancestor,
+#access .current-post-item {
+z-index: 10;
 opacity: 1;
-border-radius: 10px 10px 10px 10px;
+border-radius: 10px;
+background-color: #111111;
 }
 
 body {
@@ -164,6 +153,10 @@ body {
     float: left;
     width: 100%;
     height: 200px;
+    border: none;
+}
+#header img{
+    border:none;
 }
 
 #footer {
@@ -176,13 +169,12 @@ body {
     font-family: monospace;
     font-style: normal;
     font-weight: 400;
-    -moz-border-radius: 0px 0px 10px 10px;
     border-radius: 0px 0px 10px 10px;
 }
 
 #main{
     padding-top: 2em;
-    margin-top: 0px;
+    margin-top: -3px;
    float: left;
    width: 1024px;
    /* background-color: #E6E6B8;*/
@@ -190,19 +182,40 @@ body {
     font-style: normal;
     font-weight: 400;
     text-align: center;
--moz-border-radius: 10px 10px 0px 0px;
     border-radius: 10px 10px 0px 0px;
 }
 
 #main h1{
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
+
+#main p{
+    text-align: center;
+    width:280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 18px;
+    letter-spacing: 0px;
+    font-size: 14px;
+    border: 2px solid #CFCFCF;
+    border:none;
+    margin-bottom: 35px;
+}
+
 
 #main img{
   border:2px solid #CFCFCF;
+  margin-bottom: 5px;
 }
 
-#post-info{
+.gallery-caption{
+    display: none;
+}
+
+.post-info{
     font-size: 12px;
     margin-bottom: 20px;
     display: none;
@@ -243,11 +256,10 @@ body {
     margin-bottom: 30px;
 }
 .category-gallery img{
-    -moz-border-radius: 15px;
     border-radius: 15px;
 }
 
-.catefory-gallery-thump-info{
+.category-gallery-thumb-info{
     margin-top: 3px;
 }
 
